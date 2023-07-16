@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "./SliderInfo.Style/SliderInfo.css";
+import Spin from "../CatalogC/Spin";
 export default function SliderInfo() {
-  const [arrayImg, setArrayImg] = React.useState(["#", "#", "#"]);
+  const [arrayImg, setArrayImg] = React.useState(["#"]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
   const changeGoogleSheetsUrl = (url) => {

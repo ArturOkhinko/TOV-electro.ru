@@ -14,13 +14,13 @@ export default function NavBar() {
     <div className="main-nav-bar">
       <div className="navigation">
         <Link className="link" to="/home">
-          HOME
+          ГЛАВНАЯ
         </Link>
         <Link className="link" to="/info">
-          INFO
+          О НАС
         </Link>
         <Link className="link" to="/catolog">
-          CATALOG
+          КАТАЛОГ
         </Link>
       </div>
       {widthWindow < 800 ? (

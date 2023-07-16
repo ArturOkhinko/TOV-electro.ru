@@ -1,7 +1,8 @@
 import React from "react";
 import "./Catalog.Style/Catalog.css";
-import ElectroTovary from "./ElectroTovaryCC/ElectroTovary";
+import ElectroTovary from "./ElectroTovary";
 import Select from "../SelectC/Select";
+import Spin from "./Spin";
 export default function Catalog() {
   const [data, setData] = React.useState();
   const [propsArray, setPropsArray] = React.useState([]);
@@ -130,9 +131,8 @@ export default function Catalog() {
         {searchAndSortedProjects.length ? (
           <ElectroTovary projects={searchAndSortedProjects} />
         ) : (
-          <div>
-            Таких товаров у нас нет, но если вы свяжетесь с нами, то мы закажем
-            их для вас.
+          <div className="spin">
+            <Spin />
           </div>
         )}
       </div>

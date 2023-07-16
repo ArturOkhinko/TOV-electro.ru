@@ -6,6 +6,7 @@ import Time from "../TimeC/Time";
 import ModalWindow from "./ModalWindow";
 export default function Info() {
   const [isHr, setIsHr] = React.useState(true);
+  const [modalWindow, setModalWindow] = React.useState(false);
 
   React.useEffect(() => {
     const widthWindow = window.innerWidth;
@@ -28,9 +29,14 @@ export default function Info() {
 
   return (
     <div className="main-info">
-      <div className="maps-modal-window">
-        <ModalWindow />
-      </div>
+      {modalWindow ? (
+        <div className="maps-modal-window">
+          <ModalWindow
+            modalWindow={modalWindow}
+            onClick={(isModalWindow) => setModalWindow(isModalWindow)}
+          />
+        </div>
+      ) : null}
       <div className="line-info">
         <div className="slider-info-main">
           <div className="slider-info">
@@ -38,8 +44,8 @@ export default function Info() {
           </div>
         </div>
         <div className="main-text">
-          <div className="name danger">НАЗВАНИЕ</div>
-          <a>
+          <div className="name danger">Электротовары</div>
+          <button onClick={() => setModalWindow(true)}>
             <div className="text-main-info">
               Мы находимся по адресу "Город: Чапаевск, ул.
               <div className="danger">
@@ -48,7 +54,7 @@ export default function Info() {
                 (териториия центральнного рынка)"
               </div>
             </div>
-          </a>
+          </button>
           <div className="text">
             Наш магазин открылся совсем недавно и мы, как никто другой
             заинтересованы в том, чтобы держать низкие цены. И да, товары у нас
@@ -63,8 +69,8 @@ export default function Info() {
       <div className="more-text">
         {isHr ? <hr /> : null}
         <div className="time-worke">
-          <div className="text-time">
-            Здесь представлено время в каторое <p> мы работаем.</p>
+          <div className="text-time danger">
+            Здесь представлено время в каторое мы работаем.
           </div>
           <div className="time-info">
             <ul>

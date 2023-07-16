@@ -3,17 +3,22 @@ $textColor: rgb(0, 132, 255)
 $mainTextColor: rgb(181, 216, 255)
 .main-modal-window
     position: fixed
-    top: 0
-    background-color: $backgroundColor
-    width: 700px
-    height: 200px
-    z-index: 10
-    border: 1px solid $textColor
-    border-radius: 20px
+    z-index: 1
+    height: 100%
+    width: 95%
     display: flex
-    flex-direction: column
     justify-content: center
     .modal-window
+        background-color: $backgroundColor
+        width: 700px
+        height: 200px
+        z-index: 10
+        border: 1px solid $textColor
+        border-radius: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin: 0 200px 0 0
         ul
             list-style: none
             display: flex
@@ -40,36 +45,63 @@ $mainTextColor: rgb(181, 216, 255)
         color: $mainTextColor
         font-size: 24px
         text-align: center
-@media ( max-width: 900px )
+@media ( max-width: 950px )
     .main-modal-window
-        width: 400px
-        height: 140px
+        p
+            font-size: 16px
         .modal-window
             ul
-                li
-                    margin: 10px
-                    img
-                        width: 50px
-                        height: 50px
+                .google-maps
+                    margin: 0 0 0 16px
+                .yandex-maps
+                    margin: 0 16px 0 0
+@media ( max-width: 800px )
+    .main-modal-window
+        .modal-window
+            margin: 0
+            ul
+                .google-maps
+                    margin: 0 0 0 16px
+                .yandex-maps
+                    margin: 0 16px 0 0
                     p
                         margin: 10px
         p
             font-size: 16px
-@media ( max-width: 400px )
+@media ( max-width: 700px )
     .main-modal-window
-        width: 300px
-        height: 140px
         .modal-window
             ul
-                li
-                    img
-                        width: 40px
-                        height: 40px
-                    p
-                        margin: 4px
-                    hr
-                        height: 10px
+                .google-maps
+                    margin: 0 0 0 10px
+                .yandex-maps
+                    margin: 0 10px 0 0
+                p
+                    margin: 1px
+        p
+            font-size: 16px
+@media ( max-width: 500px )
+    .main-modal-window
         p
             font-size: 14px
+        .modal-window
+            ul
+                .google-maps
+                    margin: 0 0 0 4px
+                .yandex-maps
+                    margin: 0 4px 0 0
+@media ( max-width: 400px )
+    .main-modal-window
+        p
+            font-size: 10px
+        .modal-window
+            height: 140px
+            ul
+                img
+                    max-width: 70px
+                    max-height: 70px
+                    align-self: center
+                hr
+                    height: 28px
 
     

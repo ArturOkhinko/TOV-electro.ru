@@ -5,6 +5,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  margin: -100px 0 0 0;
+  z-index: 10;
+  animation: modalWindow 1s;
 }
 .main-info .line-info {
   display: flex;
@@ -20,6 +24,16 @@
 .main-info .main-text {
   display: flex;
   flex-direction: column;
+}
+.main-info .main-text button {
+  background-color: rgb(16, 30, 61);
+  border: 1px solid rgb(16, 30, 61);
+  align-self: center;
+  margin: 10px;
+}
+.main-info .main-text button:hover {
+  border: 1px solid rgb(252, 190, 43);
+  cursor: pointer;
 }
 .main-info .main-text .name {
   text-align: center;
@@ -53,10 +67,10 @@
 }
 .main-info .more-text .text-time {
   display: flex;
-  justify-content: center;
-  margin: 0 160px 0 0;
+  justify-content: flex-start;
+  margin: 0 0 0 20px;
 }
-.main-info .more-text .text-time p {
+.main-info .more-text .text-time a {
   color: rgb(252, 190, 43);
   margin: 0 0 0 4px;
 }
@@ -67,7 +81,7 @@
   margin: 20px 10px 10px 40px;
 }
 .main-info .more-text .time-info .date-time {
-  margin: 40px;
+  margin: 20px 40px 20px 40px;
 }
 .main-info .more-text .text-welcome {
   align-self: center;
@@ -79,6 +93,14 @@
   color: rgb(252, 190, 43);
 }
 
+@keyframes modalWindow {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 1300px) {
   .main-info .line-info {
     flex-direction: column;
@@ -110,10 +132,10 @@
     background-color: rgb(0, 132, 255);
   }
   .more-text .text-welcome {
-    max-width: 750px;
-    align-self: center;
-    line-height: 50px;
-    margin: 40px 0 0 0;
+    min-width: 700px;
+  }
+  .more-text .text-time {
+    margin: 0;
   }
 }
 @media (max-width: 1050px) {
@@ -134,7 +156,10 @@
     font-size: 18px;
   }
   .more-text .text-welcome {
-    max-width: 800px;
+    min-width: 500px;
+  }
+  .more-text .text-time {
+    font-size: 20px;
   }
 }
 @media (max-width: 900px) {
@@ -152,17 +177,25 @@
     font-size: 20px;
   }
   .main-info .main-text .text {
-    font-size: 20px;
+    font-size: 17px;
   }
   .more-text {
     font-size: 20px;
   }
   .more-text .text-welcome {
-    line-height: 28px;
-    margin: 10px;
+    min-width: 444px;
+    font-size: 17px;
   }
   .more-text hr {
     margin: 10px;
+  }
+  .more-text .text-time {
+    font-size: 17px;
+  }
+}
+@media (max-width: 800px) {
+  .main-info .maps-modal-window {
+    margin: 0;
   }
 }
 @media (max-width: 600px) {
@@ -173,7 +206,7 @@
     font-size: 18px;
   }
   .main-info .main-text .text {
-    font-size: 17px;
+    font-size: 14px;
   }
   .more-text {
     font-size: 17px;
