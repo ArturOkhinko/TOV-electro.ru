@@ -8,8 +8,8 @@
   align-items: center;
 }
 .main-line .left .burger {
+  position: fixed;
   width: 34px;
-  align-self: center;
   margin: 1px 10px;
   transition: transform 1s;
 }
@@ -41,9 +41,15 @@
 @media (max-width: 800px) {
   .main-line .left {
     width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
   }
-  .main-line .left .burger {
+  .main-line .left .logo {
+    align-self: flex-end;
+  }
+  .main-line .burger {
+    align-self: center;
+    margin: 0 0 0 10px;
     animation: button-left 0.5s;
   }
 }

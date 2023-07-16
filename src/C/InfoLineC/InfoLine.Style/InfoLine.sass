@@ -10,8 +10,8 @@ $danger: rgb(252, 190, 43)
         align-items: center
         
         .burger
+            position: fixed
             width: 34px
-            align-self: center
             margin: 1px 10px
             transition: transform 1s
             
@@ -39,9 +39,14 @@ $danger: rgb(252, 190, 43)
     .main-line
         .left
             width: 100%
-            justify-content: space-between
-            .burger
-                animation: button-left .5s
+            flex-direction: column
+            justify-content: center
+            .logo
+                align-self: flex-end
+        .burger
+            align-self: center
+            margin: 0 0 0 10px
+            animation: button-left .5s
 @keyframes button-left
     0%
         transform: translateX(-200px)

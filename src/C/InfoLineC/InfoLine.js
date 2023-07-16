@@ -17,17 +17,17 @@ export default function InfoLine({ isNavBar }) {
 
   return (
     <div className="main-line">
+      {widthWindow <= 800 ? (
+        <div
+          className="burger"
+          style={{
+            transform: `translateX(${positionButton}%)`,
+          }}
+        >
+          <Burger isNavBar={isNavBar} />
+        </div>
+      ) : null}
       <div className="left">
-        {widthWindow <= 800 ? (
-          <div
-            className="burger"
-            style={{
-              transform: `translateX(${positionButton}%)`,
-            }}
-          >
-            <Burger isNavBar={isNavBar} />
-          </div>
-        ) : null}
         <div className="logo">
           <img src={logo} />
         </div>
