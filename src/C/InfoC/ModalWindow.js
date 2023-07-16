@@ -17,7 +17,7 @@ export default function ModalWindow({ onClick }) {
             <hr />
           </li>
           <li className="yandex-maps">
-            <a>
+            <a href="https://yandex.ru/maps/11141/chapaevsk/house/grazhdanskaya_ulitsa_7/YEAYcA5pQEEHQFtofXV5cXhnZA==/?ll=49.699940%2C52.980440&z=16.75">
               <img src={YandexMaps} />
               <p>Яндекс Карты</p>
             </a>

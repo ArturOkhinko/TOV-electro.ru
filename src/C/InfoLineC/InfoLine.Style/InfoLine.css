@@ -7,8 +7,7 @@
   display: flex;
   align-items: center;
 }
-.main-line .left .burger {
-  position: fixed;
+.main-line .burger {
   width: 34px;
   margin: 1px 10px;
   transition: transform 1s;
@@ -49,6 +48,7 @@
   }
   .main-line .burger {
     align-self: center;
+    position: fixed;
     margin: 0 0 0 10px;
     animation: button-left 0.5s;
   }
