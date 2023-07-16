@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: rgb(16, 30, 61);
+  overflow-x: hidden;
+}
+.main .content {
+  margin-left: 200px;
+  margin-top: 60px;
+  min-height: 400px;
+}
+
+.info-line {
+  min-width: 100%;
+  background-color: silver;
+  height: 45px;
+}
+
+.nav-bar {
+  display: block;
+  position: fixed;
+  margin-top: 40px;
+  width: 200px;
+  animation: left 1s;
+  z-index: 100;
+}
+
+.footer {
+  height: auto;
+  margin-top: 100px;
+  background-color: rgb(9, 9, 35);
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 800px) {
+  .main .content {
+    margin: 10px 1px 10px 1px;
+  }
+}/*# sourceMappingURL=App.css.map */

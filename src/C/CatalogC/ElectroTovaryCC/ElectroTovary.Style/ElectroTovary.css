@@ -1,0 +1,50 @@
+.main-tovary {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.main-tovary .tovar {
+  border: 1px solid rgb(0, 132, 255);
+}
+.main-tovary .tovar .img-tovar {
+  overflow: hidden;
+}
+.main-tovary .tovar .img-tovar img {
+  width: 100%;
+}
+.main-tovary .tovar .info-tovar {
+  display: flex;
+  flex-direction: column;
+}
+.main-tovary .tovar .header-tovar {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(252, 190, 43);
+}
+.main-tovary .tovar .text-tovar {
+  margin: 16px 24px 16px 20px;
+  font-size: 20px;
+}
+.main-tovary .tovar .prise {
+  text-align: end;
+  font-size: 24px;
+  margin: 0 24px 10px 0;
+  color: rgb(252, 190, 43);
+}
+
+@media (max-width: 1200px) {
+  .main-tovary {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1050px) {
+  .main-tovary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 490px) {
+  .main-tovary {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=ElectroTovary.css.map */

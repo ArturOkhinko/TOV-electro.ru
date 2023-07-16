@@ -1,0 +1,75 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+$mainTextColor: rgb(181, 216, 255)
+.main-modal-window
+    position: fixed
+    top: 0
+    background-color: $backgroundColor
+    width: 700px
+    height: 200px
+    z-index: 10
+    border: 1px solid $textColor
+    border-radius: 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .modal-window
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-between
+            li
+                display: inline-block
+                display: flex
+                align-self: center
+                margin: 10px
+                a
+                    display: flex
+                p
+                    align-self: center 
+                    margin: 40px
+                img
+                    width: 100px
+                    height: 100px
+                hr
+                    height: 70px
+            .hr-modal-window
+                margin: 0
+    p
+        margin: 10px 0 0 0 
+        color: $mainTextColor
+        font-size: 24px
+        text-align: center
+@media ( max-width: 900px )
+    .main-modal-window
+        width: 400px
+        height: 140px
+        .modal-window
+            ul
+                li
+                    margin: 10px
+                    img
+                        width: 50px
+                        height: 50px
+                    p
+                        margin: 10px
+        p
+            font-size: 16px
+@media ( max-width: 400px )
+    .main-modal-window
+        width: 300px
+        height: 140px
+        .modal-window
+            ul
+                li
+                    img
+                        width: 40px
+                        height: 40px
+                    p
+                        margin: 4px
+                    hr
+                        height: 10px
+        p
+            font-size: 14px
+
+    

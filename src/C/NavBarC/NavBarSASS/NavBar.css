@@ -1,0 +1,47 @@
+.main-nav-bar {
+  border-right: 1px solid rgb(0, 132, 255);
+  background-color: rgb(16, 30, 61);
+}
+.main-nav-bar .social-navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-nav-bar .social-navBar p {
+  font-size: 16px;
+  margin: 0 0 22px 0;
+}
+.main-nav-bar .social-navBar img {
+  width: 40px;
+  margin: 21px 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(181, 216, 255);
+  border: 1px solid rgb(0, 132, 255);
+  border-radius: 50px;
+  padding: 4px 20px 4px 20px;
+  margin: 10px;
+  min-width: 100px;
+  align-self: center;
+  text-align: center;
+  font-size: 21px;
+}
+
+.link:hover {
+  background-color: rgb(1, 75, 143);
+}
+
+.link:focus {
+  background-color: rgb(1, 75, 143);
+}
+
+.main {
+  color: rgb(0, 132, 255);
+}/*# sourceMappingURL=NavBar.css.map */

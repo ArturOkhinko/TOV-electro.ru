@@ -1,0 +1,42 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+
+.main-home
+    display: flex
+    flex-direction: column
+
+.hello-content
+    margin-left: 60px
+
+.sale-content
+    display: flex
+
+    margin-top: 60px
+
+    .text-sale
+        border: 1px solid $textColor
+        margin: 0 10px 0 10px
+        
+    .slider
+        align-self: center
+@media ( max-width: 1400px )
+    .sale-content
+        flex-direction: column
+        .slider
+            margin-left: 0
+        .text-sale
+            margin: 40px 10px 40px 10px
+
+    
+@media ( max-width: 800px)
+    .hello-content
+        margin: 0 4px 0 4px
+        .slider
+            margin: 0
+    .sale-content 
+        margin: 0 
+        .text-sale
+            margin: 20px 10px 20px 10px  
+      
+    
+

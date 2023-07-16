@@ -1,0 +1,27 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.main-footer .telephone {
+  margin-top: 10px;
+}
+
+.social-footer {
+  display: flex;
+}
+.social-footer img {
+  width: 50px;
+  margin: 20px;
+}
+
+@media (max-width: 400px) {
+  .social-footer {
+    flex-direction: column;
+  }
+  .social-footer img {
+    margin: 10px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

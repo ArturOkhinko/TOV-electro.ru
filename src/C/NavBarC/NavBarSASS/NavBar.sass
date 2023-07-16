@@ -1,0 +1,40 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+$background-Link: rgb(1, 75, 143)
+$mainTextColor: rgb(181, 216, 255)
+.main-nav-bar
+    border-right: 1px solid $textColor 
+    background-color: $backgroundColor
+    .social-navBar
+        display: flex
+        flex-direction: column
+        align-items: center
+        p
+            font-size: 16px
+            margin: 0 0 22px 0
+
+        img
+            width: 40px
+            margin: 21px 0
+.navigation
+    display: flex
+    flex-direction: column
+
+.link
+    text-decoration: none
+    color: $mainTextColor
+    border: 1px solid $textColor
+    border-radius: 50px
+    padding: 4px 20px 4px 20px
+    margin: 10px
+    min-width: 100px
+    align-self: center
+    text-align: center
+    font-size: 21px
+
+.link:hover
+    background-color: $background-Link
+.link:focus
+    background-color: $background-Link
+.main
+    color: $textColor

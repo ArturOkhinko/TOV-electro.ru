@@ -1,0 +1,63 @@
+.main-catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-catalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.line-catalog .text-catalog {
+  margin: 0 10px 20px 20px;
+  font-size: 24px;
+  color: rgb(181, 216, 255);
+}
+.line-catalog .search {
+  margin: 0 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+}
+.line-catalog .search .input {
+  margin: 20px 0 20px 10px;
+  align-self: flex-end;
+}
+.line-catalog .search .input input {
+  height: 28px;
+  width: 400px;
+  background-color: rgb(16, 30, 61);
+  border: 1px solid rgb(33, 148, 255);
+  color: rgb(33, 148, 255);
+  padding: 0 10px 0 10px;
+}
+
+.electro-tovary {
+  margin: 10px;
+}
+
+@media (max-width: 1200px) {
+  .line-catalog .text-catalog {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .line-catalog {
+    flex-direction: column;
+  }
+  .line-catalog .text-catalog {
+    font-size: 20px;
+  }
+  .line-catalog .search {
+    align-self: flex-end;
+    margin: 0 10px 10px 10px;
+  }
+}
+@media (max-width: 700px) {
+  .line-catalog .text-catalog {
+    font-size: 16px;
+  }
+  .line-catalog .search .input input {
+    width: 200px;
+  }
+}/*# sourceMappingURL=Catalog.css.map */

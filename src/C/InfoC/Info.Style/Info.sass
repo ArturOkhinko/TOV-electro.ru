@@ -1,0 +1,183 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+$mainTextColor: rgb(181, 216, 255)
+$danger: rgb(252, 190, 43)
+.main-info
+    margin-left: 10px
+    .maps-modal-window
+        width: 100%
+        display: flex
+        justify-content: center
+    .line-info
+        display: flex
+        flex-direction: row
+        align-items: center
+
+    .slider-info-main
+        height: 250px
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+
+    .main-text
+        display: flex
+        flex-direction: column
+        .name
+            text-align: center
+            margin-top: 10px
+            font-size: 40px
+        .text-main-info
+            margin: 10px 20px
+            font-size: 24px
+            color: $mainTextColor
+            text-align: center
+            a
+                text-decoration-color: $textColor
+
+        .text
+            font-size: 22px
+            margin: 0 40px 10px
+            color: $mainTextColor
+            .link-info-catalog
+                color: $danger
+                margin-left: 10px
+    .more-text
+        margin: 20px 20px 10px 20px
+        font-size: 24px
+        color: $mainTextColor
+        margin: 10px 40px 10px
+        display: flex
+        .text-time
+            display: flex
+            justify-content: center
+            margin: 0 160px 0 0
+            p
+                color: $danger
+                margin: 0 0 0 4px
+        .time-info
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 20px 10px 10px 40px
+            .date-time
+                margin: 40px
+        .text-welcome
+            align-self: center
+            max-width: 400px
+            line-height: 50px
+.danger
+    color: $danger
+@media ( max-width: 1300px)
+    .main-info
+        .line-info
+            flex-direction: column
+        .slider-info-main
+            min-width: 560px
+            height: 250px
+        .main-text
+            .name
+                font-size: 40px
+            .text-main-info
+                font-size: 24px
+            .text
+                font-size: 22px
+    .more-text
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 10px 10px 10px
+        hr
+            width: 100%
+            margin: 20px
+            border: none
+            height: 1px
+            background-color: $textColor
+        .text-welcome
+            max-width: 750px
+            align-self: center
+            line-height: 50px
+            margin: 40px 0 0 0
+@media ( max-width: 1050px)
+    .main-info
+        .slider-info-main
+            min-width: 560px
+            height: 250px
+        .main-text
+            .name
+                font-size: 28px
+            .text-main-info
+                font-size: 24px
+            .text
+                font-size: 22px
+    .more-text
+        .time-info
+            font-size: 18px
+        .text-welcome
+            max-width: 800px
+@media ( max-width: 900px)
+    .main-info
+        margin: 0
+        .slider-info-main
+            min-width: 460px
+            height: 200px
+        .main-text
+            .name
+                font-size: 24px
+            .text-main-info
+                font-size: 20px
+            .text
+                font-size: 20px
+    .more-text
+        font-size: 20px
+        .text-welcome
+            line-height: 28px
+            margin: 10px
+        hr
+            margin: 10px
+        
+@media ( max-width: 600px)
+    .main-info
+        .main-text
+            .name
+                font-size: 22px
+            .text-main-info
+                font-size: 18px
+            .text
+                font-size: 17px
+    .more-text
+        font-size: 17px
+        .time-info
+            font-size: 17px
+            
+@media ( max-width: 500px)
+    .main-info
+        .slider-info-main
+            min-width: 300px
+            height: 200px
+        .main-text
+            .name
+                font-size: 24px
+            .text-main-info
+                font-size: 20px
+            .text
+                font-size: 14px
+    .more-text
+        margin: 10px
+        font-size: 14px
+        .time-info
+            font-size: 14px
+@media ( max-width: 400px)
+    .main-info
+        .main-text
+            .name
+                font-size: 20px
+            .text-main-info
+                font-size: 16px
+            .text
+                font-size: 10px
+    .more-text
+        font-size: 10px
+        .time-info
+            font-size: 10px
+        

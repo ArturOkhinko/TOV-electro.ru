@@ -1,0 +1,105 @@
+.slider-main {
+  width: 100%;
+  height: 350px;
+  display: flex;
+}
+.slider-main button {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  background-color: rgb(16, 30, 61);
+  border: 1px solid rgb(0, 132, 255);
+  border-radius: 50px;
+  margin: 10px;
+  color: rgb(181, 216, 255);
+  font-size: 16px;
+  text-align: center;
+}
+.slider-main button:hover {
+  background-color: rgb(0, 132, 255);
+}
+
+.slider-window {
+  width: 700px;
+  height: 350px;
+  overflow: hidden;
+}
+.slider-window .allImg {
+  width: 700px;
+  height: 350px;
+  display: flex;
+  transition: transform 1s;
+}
+.slider-window .allImg img {
+  min-width: 700px;
+  height: 350px;
+}
+
+@media (max-width: 1000px) {
+  .slider-main {
+    height: 250px;
+  }
+  .slider-main .slider-window {
+    width: 500px;
+    height: 250px;
+  }
+  .slider-main .slider-window .allImg {
+    width: 500px;
+    height: 250px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 500px;
+    height: 250px;
+  }
+}
+@media (max-width: 770px) {
+  .slider-main {
+    height: 225px;
+  }
+  .slider-main .slider-window {
+    width: 450px;
+    height: 225px;
+  }
+  .slider-main .slider-window .allImg {
+    width: 450px;
+    max-height: 225px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 450px;
+    height: 225px;
+  }
+}
+@media (max-width: 550px) {
+  .slider-main {
+    height: 140px;
+  }
+  .slider-main .slider-window {
+    width: 280px;
+    height: 140px;
+  }
+  .slider-main .slider-window .allImg {
+    width: 280px;
+    max-height: 140px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 280px;
+    height: 140px;
+  }
+}
+@media (max-width: 400px) {
+  .slider-main {
+    height: 125px;
+  }
+  .slider-main .slider-window {
+    width: 250px;
+    height: 125px;
+  }
+  .slider-main .slider-window .allImg {
+    width: 350px;
+    height: 125px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 250px;
+    height: 125px;
+  }
+}/*# sourceMappingURL=Slider.css.map */

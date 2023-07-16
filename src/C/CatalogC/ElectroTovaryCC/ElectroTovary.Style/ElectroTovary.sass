@@ -1,0 +1,51 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+$mainTextColor: rgb(181, 216, 255)
+$backgroundColorFooter: rgb(9, 9, 35)
+$danger: rgb(252, 190, 43)
+.main-tovary
+    min-width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 10px
+    .tovar
+        border: 1px solid $textColor
+
+
+        .img-tovar
+            overflow: hidden
+            img
+                width: 100%
+
+                
+
+        .info-tovar
+            display: flex
+            flex-direction: column
+        .header-tovar
+            text-align: center
+            font-size: 40px
+            color: $danger
+        .text-tovar
+            margin: 16px 24px 16px 20px
+            font-size: 20px
+        .prise
+            text-align: end
+            font-size: 24px
+            margin: 0 24px 10px 0
+            color: $danger
+
+
+@media ( max-width: 1200px )
+    .main-tovary
+        grid-template-columns: 1fr 1fr 1fr
+    
+@media ( max-width: 1050px )
+    .main-tovary
+        grid-template-columns: 1fr 1fr
+@media ( max-width: 490px )
+    .main-tovary
+        grid-template-columns: 1fr
+
+
+    

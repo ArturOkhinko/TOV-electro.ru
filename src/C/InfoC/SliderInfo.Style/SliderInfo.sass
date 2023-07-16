@@ -1,0 +1,138 @@
+$backgroundColor: rgb(16, 30, 61)
+$textColor: rgb(0, 132, 255)
+$mainTextColor: rgb(181, 216, 255)
+.info-slider-main
+    width: 620px
+    height: 250px
+    display: flex
+    button
+        min-width: 40px
+        min-height: 40px
+        align-self: center
+        background-color: $backgroundColor
+        border-radius: 40px
+        border: 1px solid $textColor
+        margin: 10px
+        font-size: 16px
+        color: $mainTextColor
+        
+    button:hover
+        background-color: $textColor
+.info-slider-window
+    width: 500px
+    height: 250px
+    overflow: hidden
+    .info-allImg
+        width: 1500px
+        height: 250px
+        display: flex
+        transition: transform 1s
+
+        img
+            min-width: 500px
+            height: 250px
+@media ( max-width: 1300px  )
+    .info-slider-main
+        height: 250px
+        .info-slider-window
+            width: 500px
+            height: 250px
+            .info-allImg
+                width: 500px
+                height: 250px
+                img
+                    min-width: 500px
+                    height: 250px
+@media ( max-width: 1050px  )
+    .info-slider-main
+        height: 250px
+        .info-slider-window
+            width: 500px
+            height: 250px
+            .info-allImg
+                width: 500px
+                max-height: 250px
+                img
+                    min-width: 500px
+                    height: 250px
+@media ( max-width: 900px  )
+    .info-slider-main
+        width: 520px
+        height: 200px
+        .info-slider-window
+            width: 400px
+            height: 200px
+
+            .info-allImg
+                width: 400px
+                max-height: 200px
+                img
+                    min-width: 400px
+                    height: 200px
+@media ( max-width: 500px  )
+    .info-slider-main
+        width: 360px
+        height: 190px
+        display: grid
+        grid-template-columns: 1fr 7fr 1fr
+        grid-template-rows: 1fr
+        button
+            width: 40px
+            height: 40px
+            margin: 0
+            z-index: 1
+            background-color: rgba(444,444,444,0)
+        .prev
+            grid-row: 1/2
+            grid-column: 1/2
+        .next
+            grid-row: 1/2
+            grid-column: 3/4
+            
+        .info-slider-window
+            width: 360px
+            height: 190px
+            grid-column: 1/4
+            grid-row: 1/2
+
+            .info-allImg
+                width: 360px
+                max-height: 190px
+                img
+                    min-width: 360px
+                    height: 190px
+@media ( max-width: 400px  )
+    .info-slider-main
+        width: 200px
+        height: 100px
+        display: grid
+        grid-template-columns: 1fr 3fr 1fr
+        grid-template-rows: 1fr
+        margin: 0 15% 0 15%
+        button
+            width: 40px
+            height: 40px
+            margin: 0
+            z-index: 1
+            background-color: rgba(444,444,444,0)
+        .prev
+            grid-row: 1/2
+            grid-column: 1/2
+        .next
+            grid-row: 1/2
+            grid-column: 3/4
+            
+        .info-slider-window
+            width: 200px
+            height: 100px
+            grid-column: 1/4
+            grid-row: 1/2
+
+            .info-allImg
+                width: 200px
+                max-height: 100px
+                img
+                    min-width: 200px
+                    height: 100px
+
+    
