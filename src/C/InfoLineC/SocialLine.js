@@ -12,10 +12,10 @@ export default function SocialLine() {
         <a href="https://vk.com/va_electro">
           <img src={VK} />
         </a>
-        <a href="viber://chat?number=%2B79376588717">
+        <a href="viber://chat?number=%2B79879113303">
           <img src={Viber} />
         </a>
-        <a href="https://wa.me/79376588717?text=Здравствуйте.%20Вопрос%20по%20поводу%20">
+        <a href="https://wa.me/79879113303?text=Здравствуйте.%20Вопрос%20по%20поводу%20">
           <img src={WhatsApp} />
         </a>
         <a href="mailto:va_electro@bk.ru">
