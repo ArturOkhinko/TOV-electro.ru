@@ -8,7 +8,6 @@
   position: fixed;
   margin: -100px 0 0 0;
   z-index: 10;
-  animation: modalWindow 1s;
 }
 .main-info .line-info {
   display: flex;
@@ -93,14 +92,6 @@
   color: rgb(252, 190, 43);
 }
 
-@keyframes modalWindow {
-  0% {
-    transform: translateY(-400px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @media (max-width: 1300px) {
   .main-info .line-info {
     flex-direction: column;
@@ -118,23 +109,24 @@
   .main-info .main-text .text {
     font-size: 22px;
   }
-  .more-text {
+  .main-info .more-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 10px 10px;
   }
-  .more-text hr {
+  .main-info .more-text hr {
     width: 100%;
     margin: 20px;
     border: none;
     height: 1px;
     background-color: rgb(0, 132, 255);
   }
-  .more-text .text-welcome {
-    min-width: 700px;
+  .main-info .more-text .text-welcome {
+    min-width: 95%;
+    line-height: 24px;
   }
-  .more-text .text-time {
+  .main-info .more-text .text-time {
     margin: 0;
   }
 }
@@ -154,9 +146,6 @@
   }
   .more-text .time-info {
     font-size: 18px;
-  }
-  .more-text .text-welcome {
-    min-width: 500px;
   }
   .more-text .text-time {
     font-size: 20px;
@@ -179,17 +168,13 @@
   .main-info .main-text .text {
     font-size: 17px;
   }
-  .more-text {
+  .main-info .more-text {
     font-size: 20px;
   }
-  .more-text .text-welcome {
-    min-width: 444px;
-    font-size: 17px;
-  }
-  .more-text hr {
+  .main-info .more-text hr {
     margin: 10px;
   }
-  .more-text .text-time {
+  .main-info .more-text .text-time {
     font-size: 17px;
   }
 }
@@ -208,10 +193,10 @@
   .main-info .main-text .text {
     font-size: 14px;
   }
-  .more-text {
+  .main-info .more-text {
     font-size: 17px;
   }
-  .more-text .time-info {
+  .main-info .more-text .time-info {
     font-size: 17px;
   }
 }
@@ -227,17 +212,34 @@
     font-size: 20px;
   }
   .main-info .main-text .text {
-    font-size: 14px;
+    font-size: 16px;
   }
-  .more-text {
+  .main-info .more-text {
     margin: 10px;
     font-size: 14px;
   }
-  .more-text .time-info {
+  .main-info .more-text .time-info {
     font-size: 14px;
   }
 }
 @media (max-width: 400px) {
+  .main-info .main-text .name {
+    font-size: 24px;
+  }
+  .main-info .main-text .text-main-info {
+    font-size: 20px;
+  }
+  .main-info .main-text .text {
+    font-size: 16px;
+  }
+  .more-text {
+    font-size: 10px;
+  }
+  .more-text .time-info {
+    font-size: 10px;
+  }
+}
+@media (max-width: 340px) {
   .main-info .main-text .name {
     font-size: 20px;
   }
@@ -247,10 +249,11 @@
   .main-info .main-text .text {
     font-size: 10px;
   }
-  .more-text {
+  .main-info .more-text {
     font-size: 10px;
   }
-  .more-text .time-info {
+  .main-info .more-text .time-info {
+    flex-direction: column;
     font-size: 10px;
   }
 }/*# sourceMappingURL=Info.css.map */

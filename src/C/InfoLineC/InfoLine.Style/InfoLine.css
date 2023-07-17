@@ -51,6 +51,7 @@
     position: fixed;
     margin: 0 0 0 10px;
     animation: button-left 0.5s;
+    z-index: 10;
   }
 }
 @keyframes button-left {
