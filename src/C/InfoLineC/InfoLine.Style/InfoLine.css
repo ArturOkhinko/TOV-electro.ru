@@ -7,6 +7,9 @@
   display: flex;
   align-items: center;
 }
+.main-line .left .logo {
+  border-bottom: 1px solid rgb(0, 132, 255);
+}
 .main-line .burger {
   width: 34px;
   margin: 1px 10px;

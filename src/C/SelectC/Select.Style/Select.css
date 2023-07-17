@@ -1,8 +1,15 @@
 select {
   height: 40px;
+  width: 100%;
   border: 1px solid rgb(252, 190, 43);
   background-color: rgb(16, 30, 61);
   color: rgb(0, 132, 255);
   border-radius: 4px;
   font-size: 16px;
+}
+
+@media (max-width: 450px) {
+  select {
+    min-width: 100%;
+  }
 }/*# sourceMappingURL=Select.css.map */

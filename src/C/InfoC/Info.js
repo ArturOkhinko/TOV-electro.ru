@@ -51,7 +51,7 @@ export default function Info() {
               <div className="danger">
                 Гражданская 7
                 <br />
-                (териториия центральнного рынка)"
+                (териториия центрального рынка)"
               </div>
             </div>
           </button>
@@ -70,7 +70,7 @@ export default function Info() {
         {isHr ? <hr /> : null}
         <div className="time-worke">
           <div className="text-time danger">
-            Здесь представлено время в каторое мы работаем.
+            Здесь представлено время в которое мы работаем.
           </div>
           <div className="time-info">
             <ul>
@@ -87,7 +87,7 @@ export default function Info() {
             </div>
             {!isHr ? (
               <div className="text-welcome">
-                Мы ждем вас в это время. Не забывайте, что именно в это врремя у
+                Мы ждем вас в это время. Не забывайте, что именно в это время у
                 вас есть шанс купить товары по самым низким ценам.
               </div>
             ) : null}
@@ -96,7 +96,7 @@ export default function Info() {
         {isHr ? <hr /> : null}
         {isHr ? (
           <div className="text-welcome">
-            Мы ждем вас в это время. Не забывайте, что именно в это врремя у вас
+            Мы ждем вас в это время. Не забывайте, что именно в это время у вас
             есть шанс купить товары по самым низким ценам.
           </div>
         ) : null}

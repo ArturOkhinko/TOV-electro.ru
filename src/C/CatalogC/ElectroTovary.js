@@ -1,6 +1,6 @@
 import React from "react";
 import "./ElectroTovary.Style/ElectroTovary.css";
-import Spin from "./Spin";
+import Spin from "../Spin/Spin";
 export default function ElectroTovary({ projects }) {
   return (
     <div className="main-tovary">

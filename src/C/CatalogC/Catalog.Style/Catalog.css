@@ -32,7 +32,7 @@
   background-color: rgb(16, 30, 61);
   border: 1px solid rgb(33, 148, 255);
   color: rgb(33, 148, 255);
-  padding: 0 10px 0 10px;
+  padding: 0 4px 0 4px;
 }
 
 .electro-tovary {
@@ -52,23 +52,17 @@
     font-size: 20px;
   }
   .line-catalog .search {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 10px 10px 10px;
+    align-self: flex-end;
+    margin: 0 20px 0 20px;
   }
   .line-catalog .search .select-catalog {
-    width: 50% px;
-    margin: 20px 10px 20px 10px;
-    display: flex;
-    justify-content: center;
-  }
-  .line-catalog .search .input {
     width: 50%;
     display: flex;
-    justify-content: center;
-    margin: 24px 0 24px 0;
+  }
+  .line-catalog .search .input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 @media (max-width: 700px) {
@@ -79,11 +73,11 @@
     margin: 0 10px 10px 10px;
   }
   .line-catalog .search .select-catalog {
-    width: 200px;
-    margin: 20px 10px 20px 10px;
+    width: 50%;
+    margin: 20px 0 0 10px;
   }
   .line-catalog .search .input input {
-    width: 200px;
+    width: 100%;
   }
 }
 @media (max-width: 450px) {
@@ -95,23 +89,23 @@
   }
   .line-catalog .search {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    margin: 0 0 10px 0;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 10px 0 10px;
   }
   .line-catalog .search .select-catalog {
-    width: 240px;
+    width: 210px;
     display: flex;
     justify-conten: center;
     margin: 0;
   }
   .line-catalog .search .input {
     display: flex;
-    width: 240px;
+    width: 200px;
     margin: 10px 0 0 0;
   }
   .line-catalog .search .input input {
-    min-width: 240px;
+    min-width: 100%;
   }
 }/*# sourceMappingURL=Catalog.css.map */

@@ -29,6 +29,13 @@
   display: flex;
   transition: transform 1s;
 }
+.info-slider-window .info-allImg .spin-slider-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .info-slider-window .info-allImg img {
   min-width: 500px;
   height: 250px;

@@ -5,9 +5,13 @@ $danger: rgb(252, 190, 43)
 $background-Link: rgb(1, 75, 143)
 select
     height: 40px
+    width: 100%
     border: 1px solid $danger
     background-color: $backgroundColor
     color: $textColor
     border-radius: 4px
     font-size: 16px
-
+@media ( max-width: 450px )
+    select
+        min-width: 100%
+    

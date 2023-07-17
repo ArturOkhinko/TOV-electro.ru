@@ -31,7 +31,7 @@ $danger: rgb(252, 190, 43)
                 background-color: $backgroundColor
                 border: 1px solid $textColor
                 color: $textColor
-                padding: 0 10px 0 10px
+                padding: 0 4px 0 4px
 
 
 .electro-tovary
@@ -46,21 +46,15 @@ $danger: rgb(252, 190, 43)
         .text-catalog
             font-size: 20px
         .search
-            flex-direction: row
-            width: 100%
-            justify-content: space-around
-            align-items: center
-            margin: 0 10px 10px 10px
+            align-self: flex-end
+            margin: 0 20px 0 20px
             .select-catalog
-                width: 50%px
-                margin: 20px 10px 20px 10px 
-                display: flex
-                justify-content: center
-            .input
                 width: 50%
                 display: flex
-                justify-content: center
-                margin: 24px 0 24px 0
+            .input
+                width: 100%
+                display: flex
+                justify-content: flex-end
 @media ( max-width: 700px)
     .line-catalog
         .text-catalog
@@ -68,11 +62,11 @@ $danger: rgb(252, 190, 43)
         .search
             margin: 0 10px 10px 10px
             .select-catalog
-                width: 200px
-                margin: 20px 10px 20px 10px
+                width: 50%
+                margin: 20px 0 0 10px
             .input
                 input
-                    width: 200px
+                    width: 100%
 @media ( max-width: 450px)
     .line-catalog
         flex-direction: column-reverse
@@ -80,20 +74,20 @@ $danger: rgb(252, 190, 43)
             font-size: 16px
         .search
             display: flex
-            flex-wrap: wrap
-            justify-content: center
             align-items: center
-            margin: 0 0 10px 0
+            flex-wrap: wrap
+            width: 100%
+            margin: 0 10px 0 10px
             .select-catalog
-                width: 240px
+                width: 210px
                 display: flex
                 justify-conten: center
                 margin: 0
             .input
                 display: flex
-                width: 240px
+                width: 200px
                 margin: 10px 0 0 0
                 input
-                    min-width: 240px
+                    min-width: 100%
                     
     

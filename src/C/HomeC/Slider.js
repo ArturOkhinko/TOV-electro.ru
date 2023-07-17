@@ -1,8 +1,9 @@
 import React from "react";
 import "./SliderC/Slider.css";
+import Spin from "../Spin/Spin";
 
 export default function Slider() {
-  const [arrayImg, setArrayImg] = React.useState(["#"]);
+  const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
   const changeGoogleSheetsUrl = (url) => {
@@ -119,9 +120,13 @@ export default function Slider() {
             transform: `translateX(${positionImg}px)`,
           }}
         >
-          {arrayImg.map((element, index) => (
-            <img key={index} src={element} />
-          ))}
+          {arrayImg.length > 0 ? (
+            arrayImg.map((element) => <img src={element} />)
+          ) : (
+            <div className="slider-spin-home">
+              <Spin />
+            </div>
+          )}
         </div>
       </div>
       <button className="next" onClick={hendleNext}>

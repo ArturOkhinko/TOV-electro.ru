@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "./SliderInfo.Style/SliderInfo.css";
-import Spin from "../CatalogC/Spin";
+import Spin from "../Spin/Spin";
 export default function SliderInfo() {
-  const [arrayImg, setArrayImg] = React.useState(["#"]);
+  const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
+
   const changeGoogleSheetsUrl = (url) => {
     const arrayUrl = [...url];
     arrayUrl.splice(-10);
     const changeUrl = arrayUrl.join("") + "gviz/tq?";
     return changeUrl;
   };
+
   const urlSheets =
     "https://docs.google.com/spreadsheets/d/1qUbUFA1v4UYMTVL1SFwCH-xaTy4FlhlEkmgpGeUxgvc/edit#gid=0";
   const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlSheets);
@@ -122,9 +124,13 @@ export default function SliderInfo() {
             transform: `translateX(${positionImg}px)`,
           }}
         >
-          {arrayImg.map((element) => (
-            <img src={element} />
-          ))}
+          {arrayImg.length > 0 ? (
+            arrayImg.map((element, index) => <img key={index} src={element} />)
+          ) : (
+            <div className="spin-slider-info">
+              <Spin />
+            </div>
+          )}
         </div>
       </div>
       <button className="next" onClick={hendleNext}>

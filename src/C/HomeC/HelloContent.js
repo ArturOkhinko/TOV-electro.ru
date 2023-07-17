@@ -1,6 +1,7 @@
 import React from "react";
 import "./HelloContentC/HelloContent.css";
 import video from "/Users/admin/Desktop/pet-progects/electro-tovary/src/video/Video.mov";
+import logo from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/Logo.jpeg";
 export default function HelloContent() {
   return (
     <div className="main-hello-content">
@@ -11,7 +12,7 @@ export default function HelloContent() {
         </p>
 
         <div className="video-hello-content">
-          <video controls loop src={video}></video>
+          <video poster={logo} controls loop src={video}></video>
         </div>
       </div>
       <hr className="hello-content-hr" />

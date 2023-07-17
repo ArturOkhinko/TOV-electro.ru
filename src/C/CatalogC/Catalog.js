@@ -2,7 +2,7 @@ import React from "react";
 import "./Catalog.Style/Catalog.css";
 import ElectroTovary from "./ElectroTovary";
 import Select from "../SelectC/Select";
-import Spin from "./Spin";
+import Spin from "../Spin/Spin";
 export default function Catalog() {
   const [data, setData] = React.useState();
   const [propsArray, setPropsArray] = React.useState([]);
@@ -126,7 +126,7 @@ export default function Catalog() {
           Добро пожаловать в каталог. Для вас здесь предусмотрены такие
           возможности как сортировка по цене и поиск товаров по названию. Здесь
           скоро появятся все товары, которые есть у нас в продаже. Пока что
-          ознакомтесь с ассортиментом представленном на сайте.
+          ознакомьтесь с ассортиментом представленном на сайте.
         </div>
       </div>
       <div className="electro-tovary">
