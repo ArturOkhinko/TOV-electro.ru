@@ -37,7 +37,7 @@ export default function SliderInfo() {
 
   function changeGoogleDiscUrl(url) {
     const urlPhoto = url;
-    const sliceUrl = urlPhoto.slice(32, -20);
+    const sliceUrl = urlPhoto.slice(32, 65);
     console.log(sliceUrl);
     const googleDriveLink =
       "https://drive.google.com/uc?export=view&id=" + sliceUrl;

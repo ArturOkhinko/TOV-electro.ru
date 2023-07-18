@@ -3,6 +3,7 @@ import "./HomeCStyle/Home.css";
 import HelloContent from "./HelloContent";
 import Slider from "./Slider";
 export default function Home() {
+  const [text, setText] = React.useState([]);
   return (
     <div className="main-home">
       <div className="hello-content">
@@ -10,9 +11,13 @@ export default function Home() {
       </div>
       <div className="sale-content">
         <div className="slider">
-          <Slider />
+          <Slider changeArrayText={(arrayText) => setText(arrayText)} />
         </div>
-        <div className="text-sale">Описание распродаж</div>
+        <div className="main-text-sale">
+          {text.length
+            ? text.map((element) => <div className="text-sale">{element}</div>)
+            : null}
+        </div>
       </div>
     </div>
   );

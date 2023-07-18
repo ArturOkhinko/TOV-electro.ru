@@ -2,7 +2,7 @@ import React from "react";
 import "./SliderC/Slider.css";
 import Spin from "../Spin/Spin";
 
-export default function Slider() {
+export default function Slider({ changeArrayText }) {
   const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
@@ -13,9 +13,8 @@ export default function Slider() {
     return changeUrl;
   };
   const urlSheets =
-    "https://docs.google.com/spreadsheets/d/1qUbUFA1v4UYMTVL1SFwCH-xaTy4FlhlEkmgpGeUxgvc/edit#gid=0";
+    "https://docs.google.com/spreadsheets/d/11qkoBCCifIPzOBunvWP5n1ilErXN_8tixOcThEb9WuE/edit#gid=0";
   const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlSheets);
-
   const fetchGoogleDisc = function (url) {
     fetch(url)
       .then((res) => res.text())
@@ -24,19 +23,18 @@ export default function Slider() {
       });
   };
 
-  function queryArrayColumnsValue(JSON, row) {
+  function queryArrayColumnsValue(JSON, col) {
     const arrayRows = JSON.table.rows;
-    const arrayColumnsWidthObj = arrayRows[row - 1].c;
-    const arrayColumnsValue = [];
-    arrayColumnsWidthObj.forEach((element) => {
-      arrayColumnsValue.push(element.v);
+    const arrayColumns = [];
+    arrayRows.forEach((element) => {
+      arrayColumns.push(element.c[col - 1].v);
     });
-    return arrayColumnsValue;
+    return arrayColumns;
   }
 
   function changeGoogleDiscUrl(url) {
     const urlPhoto = url;
-    const sliceUrl = urlPhoto.slice(32, -20);
+    const sliceUrl = urlPhoto.slice(32, 65);
     const googleDriveLink =
       "https://drive.google.com/uc?export=view&id=" + sliceUrl;
     return googleDriveLink;
@@ -52,6 +50,8 @@ export default function Slider() {
         return changeGoogleDiscUrl(element);
       });
       setArrayImg(changeArrayValue);
+      const arrayValueText = queryArrayColumnsValue(data, 2);
+      changeArrayText(arrayValueText);
     }
   }, [data]);
 
@@ -121,7 +121,7 @@ export default function Slider() {
           }}
         >
           {arrayImg.length > 0 ? (
-            arrayImg.map((element) => <img src={element} />)
+            arrayImg.map((element, index) => <img key={index} src={element} />)
           ) : (
             <div className="slider-spin-home">
               <Spin />

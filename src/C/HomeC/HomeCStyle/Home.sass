@@ -12,19 +12,24 @@ $textColor: rgb(0, 132, 255)
     display: flex
 
     margin-top: 60px
-    .text-sale
-        margin: 0 40px 0 10px
-        font-size: 24px
+    .main-text-sale
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .text-sale
+            margin-top: 20px
+            font-size: 24px
         
     .slider
         align-self: center
 @media ( max-width: 1400px )
     .sale-content
         flex-direction: column
+        .main-text-sale
+            .text-sale
+                margin-top: 20px
         .slider
             margin-left: 0
-        .text-sale
-            margin: 40px 10px 40px 40px
 
     
 @media ( max-width: 800px)
@@ -33,10 +38,10 @@ $textColor: rgb(0, 132, 255)
         .slider
             margin: 0
     .sale-content 
-        margin: 0 
-        .text-sale
-            font-size: 16px
-            margin: 20px 10px 20px 10px  
+        margin: 10px 
+        .main-text-sale
+            .text-sale
+                font-size: 16px
       
     
 
