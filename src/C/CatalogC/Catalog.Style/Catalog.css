@@ -49,7 +49,7 @@
     flex-direction: column;
   }
   .line-catalog .text-catalog {
-    font-size: 20px;
+    font-size: 22px;
   }
   .line-catalog .search {
     align-self: flex-end;
@@ -67,7 +67,7 @@
 }
 @media (max-width: 700px) {
   .line-catalog .text-catalog {
-    font-size: 16px;
+    font-size: 20px;
   }
   .line-catalog .search {
     margin: 0 10px 10px 10px;
@@ -95,14 +95,14 @@
     margin: 0 10px 0 10px;
   }
   .line-catalog .search .select-catalog {
-    width: 210px;
+    width: 240px;
     display: flex;
     justify-conten: center;
     margin: 0;
   }
   .line-catalog .search .input {
     display: flex;
-    width: 200px;
+    width: 228px;
     margin: 10px 0 0 0;
   }
   .line-catalog .search .input input {

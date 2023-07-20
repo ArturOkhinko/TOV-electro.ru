@@ -97,30 +97,19 @@
   .info-slider-main {
     width: 360px;
     height: 190px;
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    grid-template-rows: 1fr;
+    justify-content: space-between;
   }
   .info-slider-main button {
     width: 40px;
     height: 40px;
-    margin: 0;
+    margin: 4px;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .info-slider-main .prev {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
-  .info-slider-main .next {
-    grid-row: 1/2;
-    grid-column: 3/4;
+    background-color: rgb(16, 30, 61);
   }
   .info-slider-main .info-slider-window {
     width: 360px;
     height: 190px;
-    grid-column: 1/4;
-    grid-row: 1/2;
+    position: absolute;
   }
   .info-slider-main .info-slider-window .info-allImg {
     width: 360px;
@@ -133,40 +122,49 @@
 }
 @media (max-width: 400px) {
   .info-slider-main {
-    width: 200px;
-    height: 100px;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr;
-    margin: 0 15% 0 15%;
+    width: 340px;
+    height: 170px;
   }
   .info-slider-main button {
     width: 40px;
     height: 40px;
     margin: 0;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .info-slider-main .prev {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
-  .info-slider-main .next {
-    grid-row: 1/2;
-    grid-column: 3/4;
   }
   .info-slider-main .info-slider-window {
-    width: 200px;
-    height: 100px;
-    grid-column: 1/4;
-    grid-row: 1/2;
+    width: 340px;
+    height: 170px;
   }
   .info-slider-main .info-slider-window .info-allImg {
-    width: 200px;
-    max-height: 100px;
+    width: 340px;
+    max-height: 170px;
   }
   .info-slider-main .info-slider-window .info-allImg img {
-    min-width: 200px;
-    height: 100px;
+    min-width: 340px;
+    height: 170px;
+  }
+}
+@media (max-width: 340px) {
+  .info-slider-main {
+    width: 280px;
+    height: 140px;
+  }
+  .info-slider-main button {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    z-index: 1;
+  }
+  .info-slider-main .info-slider-window {
+    width: 280px;
+    height: 140px;
+  }
+  .info-slider-main .info-slider-window .info-allImg {
+    width: 280px;
+    max-height: 140px;
+  }
+  .info-slider-main .info-slider-window .info-allImg img {
+    min-width: 280px;
+    height: 140px;
   }
 }/*# sourceMappingURL=SliderInfo.css.map */

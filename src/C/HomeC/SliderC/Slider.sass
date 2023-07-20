@@ -63,27 +63,63 @@ $mainTextColor: rgb(181, 216, 255)
                     height: 225px
 @media ( max-width: 550px  )
     .slider-main
+        height: 200px
+        justify-content: center
+        .button
+        .prev
+            z-index: 10
+            margin: 0 155px 0 0
+            background-color: rgba(400,400,400,0)
+            color: $backgroundColor
+        .next
+            z-index: 10
+            margin: 0 0 0 155px
+            background-color: rgba(400,400,400,0)
+            color: $backgroundColor
+        .slider-window
+            width: 400px
+            height: 200px
+            position: absolute
+            
+            .allImg
+                width: 400px
+                max-height: 200px
+                .slider-spin-home
+                    margin-top: 10px
+                img
+                    min-width: 400px
+                    height: 200px
+            
+@media ( max-width: 410px  )
+    .slider-main
+        height: 170px
+        .prev
+            margin: 0 128px 0 0
+        .next
+            margin: 0 0 0 128px
+        .slider-window
+            width: 340px
+            height: 170px
+            .allImg
+                width: 340px
+                height: 170px
+                img
+                    min-width: 340px
+                    height: 170px
+@media ( max-width: 340px  )
+    .slider-main
         height: 140px
+        .prev
+            margin: 0 100px 0 0
+        .next
+            margin: 0 0 0 100px
         .slider-window
             width: 280px
             height: 140px
             .allImg
                 width: 280px
-                max-height: 140px
+                height: 140px
                 img
                     min-width: 280px
                     height: 140px
-            
-@media ( max-width: 400px  )
-    .slider-main
-        height: 125px
-        .slider-window
-            width: 250px
-            height: 125px
-            .allImg
-                width: 350px
-                height: 125px
-                img
-                    min-width: 250px
-                    height: 125px
     

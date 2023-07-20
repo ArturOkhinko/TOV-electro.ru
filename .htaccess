@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^www.ecologia-samara-tochki-razdelnogo-zbora-musora.ru/$
+RewriteRule ^(.\*) http://ecologia-samara-tochki-razdelnogo-zbora-musora.ru/$1 [R=301,L]

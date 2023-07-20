@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "./SliderInfo.Style/SliderInfo.css";
 import Spin from "../Spin/Spin";
-export default function SliderInfo() {
+import "./SliderInfo.Style/SliderInfo.css";
+export default function SliderInfo({ changeImg }) {
   const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
@@ -64,21 +64,27 @@ export default function SliderInfo() {
 
   function hendleNext() {
     const widthWindow = window.innerWidth;
-
+    console.log("НЕКСТ");
     let posImg = -500;
-    if (widthWindow < 1300) {
+    if (widthWindow <= 1300) {
       posImg = -500;
     }
-    if (widthWindow < 1050) {
+    if (widthWindow <= 1050) {
       posImg = -500;
-      console.log(posImg);
     }
-    if (widthWindow < 900) {
+    if (widthWindow <= 900) {
       posImg = -400;
     }
-    if (widthWindow < 500) {
+    if (widthWindow <= 500) {
       posImg = -360;
     }
+    if (widthWindow <= 400) {
+      posImg = -340;
+    }
+    if (widthWindow <= 340) {
+      posImg = -280;
+    }
+    console.log(posImg);
     let stop = posImg * 2;
     setPositionImg((position) => {
       return Math.max(position + posImg, stop);
@@ -92,21 +98,27 @@ export default function SliderInfo() {
 
   function hendlePrev() {
     const widthWindow = window.innerWidth;
-
+    console.log("ПРЕВ");
     let posImg = 500;
-    if (widthWindow < 1300) {
+    if (widthWindow <= 1300) {
       posImg = 500;
     }
-    if (widthWindow < 1050) {
+    if (widthWindow <= 1050) {
       posImg = 500;
-      console.log(posImg);
     }
-    if (widthWindow < 900) {
+    if (widthWindow <= 900) {
       posImg = 400;
     }
-    if (widthWindow < 500) {
+    if (widthWindow <= 500) {
       posImg = 360;
     }
+    if (widthWindow <= 400) {
+      posImg = 340;
+    }
+    if (widthWindow <= 340) {
+      posImg = 280;
+    }
+    console.log(posImg);
     setPositionImg((position) => {
       return Math.min(position + posImg, 0);
     });
@@ -125,7 +137,13 @@ export default function SliderInfo() {
           }}
         >
           {arrayImg.length > 0 ? (
-            arrayImg.map((element, index) => <img key={index} src={element} />)
+            arrayImg.map((element, index) => (
+              <img
+                key={index}
+                src={element}
+                onClick={() => changeImg(element)}
+              />
+            ))
           ) : (
             <div className="spin-slider-info">
               <Spin />

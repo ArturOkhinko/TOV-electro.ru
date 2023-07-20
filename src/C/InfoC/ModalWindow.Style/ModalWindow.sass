@@ -11,6 +11,8 @@ $danger: rgb(252, 190, 43)
     justify-content: center
     align-items: center
     color: $mainTextColor
+    top: 0
+    left: 200
     .modal-window
 
         animation: modalWindow 1s
@@ -28,8 +30,6 @@ $danger: rgb(252, 190, 43)
             align-items: center
             justify-content: space-between
             list-style: none
-
-            li
             .yandex-maps
                 a
                     display: flex
@@ -71,7 +71,6 @@ $danger: rgb(252, 190, 43)
     .main-modal-window
         .modal-window
             ul
-                li
                 .yandex-maps
                     margin: 0
                     a
@@ -86,12 +85,12 @@ $danger: rgb(252, 190, 43)
                         max-width: 80px
 @media ( max-width: 800px )
     .main-modal-window
+        left: 0
         .modal-window
             width: 70%
             height: 240px
             margin: 0
-            ul
-                li
+            ul 
                 .yandex-maps
                     a
                         font-size: 16px
@@ -117,7 +116,6 @@ $danger: rgb(252, 190, 43)
         .modal-window
             height: 200px
             ul
-                li
                 .yandex-maps
                     img
                         max-width: 90px
@@ -131,7 +129,6 @@ $danger: rgb(252, 190, 43)
         .modal-window
             height: 160px
             ul
-                li
                 .yandex-maps
                     img
                         max-width: 60px
@@ -148,7 +145,7 @@ $danger: rgb(252, 190, 43)
         .modal-window
             height: 160px
             ul
-                li
+                
                 .yandex-maps
                     margin: 0
                     a

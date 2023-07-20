@@ -3,11 +3,13 @@ import "./Catalog.Style/Catalog.css";
 import ElectroTovary from "./ElectroTovary";
 import Select from "../SelectC/Select";
 import Spin from "../Spin/Spin";
+import ModalImg from "../ModalImgC/ModalImg";
 export default function Catalog() {
   const [data, setData] = React.useState();
   const [propsArray, setPropsArray] = React.useState([]);
   const [selectedSort, setSelectedSort] = React.useState("");
   const [searchQuery, setSearchQuery] = React.useState("");
+  const [img, setImg] = React.useState("");
   let arrayValue = [];
   const changeGoogleSheetsUrl = (url) => {
     const arrayUrl = [...url];
@@ -84,9 +86,9 @@ export default function Catalog() {
     return propsArray;
   }, [selectedSort, data, propsArray]);
 
-  function sortPropsArray(sort) {
+  const sortPropsArray = (sort) => {
     setSelectedSort(sort);
-  }
+  };
   const searchAndSortedProjects = React.useMemo(() => {
     if (sortedProjects[0]) {
       return sortedProjects.filter((element) =>
@@ -135,9 +137,16 @@ export default function Catalog() {
 
     return propsArray;
   }, [searchQuery, sortedProjects, data]);
-
+  const changeImg = React.useCallback((img) => {
+    setImg(img);
+  }, []);
   return (
     <div className="main-catalog">
+      {img ? (
+        <div className="modal-img">
+          <ModalImg img={img} removeImg={() => setImg("")} />
+        </div>
+      ) : null}
       <div className="line-catalog">
         <div className="search">
           <div className="select-catalog">
@@ -168,7 +177,10 @@ export default function Catalog() {
       </div>
       <div className="electro-tovary">
         {searchAndSortedProjects.length ? (
-          <ElectroTovary projects={searchAndSortedProjects} />
+          <ElectroTovary
+            projects={searchAndSortedProjects}
+            changeImg={changeImg}
+          />
         ) : (
           <div className="spin">
             <Spin time="10000" message="Таких товаров не найдено" />

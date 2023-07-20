@@ -4,10 +4,11 @@ import "./Info.Style/Info.css";
 import SliderInfo from "./SliderInfo";
 import Time from "../TimeC/Time";
 import ModalWindow from "./ModalWindow";
+import ModalImg from "../ModalImgC/ModalImg";
 export default function Info() {
   const [isHr, setIsHr] = React.useState(true);
   const [modalWindow, setModalWindow] = React.useState(false);
-
+  const [img, setImg] = React.useState("");
   React.useEffect(() => {
     const widthWindow = window.innerWidth;
     if (widthWindow < 1300) {
@@ -26,9 +27,16 @@ export default function Info() {
       setIsHr(false);
     }
   });
-
+  const changeImg = (img) => {
+    setImg(img);
+  };
   return (
     <div className="main-info">
+      {img ? (
+        <div className="modal-img">
+          <ModalImg img={img} removeImg={() => setImg("")} />
+        </div>
+      ) : null}
       {modalWindow ? (
         <div className="maps-modal-window">
           <ModalWindow
@@ -40,7 +48,7 @@ export default function Info() {
       <div className="line-info">
         <div className="slider-info-main">
           <div className="slider-info">
-            <SliderInfo />
+            <SliderInfo changeImg={changeImg} />
           </div>
         </div>
         <div className="main-text">
@@ -60,7 +68,7 @@ export default function Info() {
             заинтересованы в том, чтобы держать низкие цены. И да, товары у нас
             действительно дешевле, чем в других магазинах. Убедитесь в этом
             сами,
-            <Link className="link-info-catalog" to="/catolog">
+            <Link className="link-info-catalog" to="/catalog">
               перейдите в наш каталог.
             </Link>
           </div>

@@ -78,7 +78,70 @@
 }
 @media (max-width: 550px) {
   .slider-main {
+    height: 200px;
+    justify-content: center;
+  }
+  .slider-main .prev {
+    z-index: 10;
+    margin: 0 155px 0 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(16, 30, 61);
+  }
+  .slider-main .next {
+    z-index: 10;
+    margin: 0 0 0 155px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(16, 30, 61);
+  }
+  .slider-main .slider-window {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+  }
+  .slider-main .slider-window .allImg {
+    width: 400px;
+    max-height: 200px;
+  }
+  .slider-main .slider-window .allImg .slider-spin-home {
+    margin-top: 10px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 400px;
+    height: 200px;
+  }
+}
+@media (max-width: 410px) {
+  .slider-main {
+    height: 170px;
+  }
+  .slider-main .prev {
+    margin: 0 128px 0 0;
+  }
+  .slider-main .next {
+    margin: 0 0 0 128px;
+  }
+  .slider-main .slider-window {
+    width: 340px;
+    height: 170px;
+  }
+  .slider-main .slider-window .allImg {
+    width: 340px;
+    height: 170px;
+  }
+  .slider-main .slider-window .allImg img {
+    min-width: 340px;
+    height: 170px;
+  }
+}
+@media (max-width: 340px) {
+  .slider-main {
     height: 140px;
+  }
+  .slider-main .prev {
+    margin: 0 100px 0 0;
+  }
+  .slider-main .next {
+    margin: 0 0 0 100px;
   }
   .slider-main .slider-window {
     width: 280px;
@@ -86,27 +149,10 @@
   }
   .slider-main .slider-window .allImg {
     width: 280px;
-    max-height: 140px;
+    height: 140px;
   }
   .slider-main .slider-window .allImg img {
     min-width: 280px;
     height: 140px;
-  }
-}
-@media (max-width: 400px) {
-  .slider-main {
-    height: 125px;
-  }
-  .slider-main .slider-window {
-    width: 250px;
-    height: 125px;
-  }
-  .slider-main .slider-window .allImg {
-    width: 350px;
-    height: 125px;
-  }
-  .slider-main .slider-window .allImg img {
-    min-width: 250px;
-    height: 125px;
   }
 }/*# sourceMappingURL=Slider.css.map */

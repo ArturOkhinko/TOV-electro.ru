@@ -1,10 +1,14 @@
 $backgroundColor: rgb(16, 30, 61)
 $textColor: rgb(0, 132, 255)
-
+$mainTextColor: rgb(181, 216, 255)
 .main-home
     display: flex
     flex-direction: column
-
+    color: $mainTextColor
+    .modalImg
+        min-width: 100%
+        min-height: 100%
+        top: 0
 .hello-content
     margin-left: 60px
 
@@ -26,8 +30,7 @@ $textColor: rgb(0, 132, 255)
     .sale-content
         flex-direction: column
         .main-text-sale
-            .text-sale
-                margin-top: 20px
+            margin: 20px
         .slider
             margin-left: 0
 

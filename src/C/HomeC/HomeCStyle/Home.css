@@ -1,6 +1,12 @@
 .main-home {
   display: flex;
   flex-direction: column;
+  color: rgb(181, 216, 255);
+}
+.main-home .modalImg {
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
 }
 
 .hello-content {
@@ -28,8 +34,8 @@
   .sale-content {
     flex-direction: column;
   }
-  .sale-content .main-text-sale .text-sale {
-    margin-top: 20px;
+  .sale-content .main-text-sale {
+    margin: 20px;
   }
   .sale-content .slider {
     margin-left: 0;

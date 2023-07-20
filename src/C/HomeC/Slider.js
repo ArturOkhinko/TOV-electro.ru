@@ -2,7 +2,7 @@ import React from "react";
 import "./SliderC/Slider.css";
 import Spin from "../Spin/Spin";
 
-export default function Slider({ changeArrayText }) {
+export default React.memo(function Slider({ changeArrayText, changeImg }) {
   const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
@@ -62,18 +62,21 @@ export default function Slider({ changeArrayText }) {
     const widthWindow = window.innerWidth;
     console.log(widthWindow);
     let posImg = -700;
-    if (widthWindow < 1000) {
+    if (widthWindow <= 1000) {
       posImg = -500;
     }
 
-    if (widthWindow < 770) {
+    if (widthWindow <= 770) {
       posImg = -450;
     }
-    if (widthWindow < 550) {
-      posImg = -280;
+    if (widthWindow <= 550) {
+      posImg = -400;
     }
-    if (widthWindow < 400) {
-      posImg = -250;
+    if (widthWindow <= 410) {
+      posImg = -340;
+    }
+    if (widthWindow <= 345) {
+      posImg = -280;
     }
     let stop = posImg * 2;
     setPositionImg((position) => {
@@ -90,24 +93,26 @@ export default function Slider({ changeArrayText }) {
     const widthWindow = window.innerWidth;
     console.log(widthWindow);
     let posImg = 700;
-    if (widthWindow < 1000) {
+    if (widthWindow <= 1000) {
       posImg = 500;
     }
 
-    if (widthWindow < 770) {
+    if (widthWindow <= 770) {
       posImg = 450;
     }
-    if (widthWindow < 550) {
-      posImg = 280;
+    if (widthWindow <= 550) {
+      posImg = 400;
     }
-    if (widthWindow < 400) {
-      posImg = 250;
+    if (widthWindow <= 410) {
+      posImg = 340;
+    }
+    if (widthWindow <= 345) {
+      posImg = 280;
     }
     setPositionImg((position) => {
       return Math.min(position + posImg, 0);
     });
   }
-
   return (
     <div className="slider-main">
       <button className="prev" onClick={hendlePrev}>
@@ -121,10 +126,16 @@ export default function Slider({ changeArrayText }) {
           }}
         >
           {arrayImg.length > 0 ? (
-            arrayImg.map((element, index) => <img key={index} src={element} />)
+            arrayImg.map((element, index) => (
+              <img
+                key={index}
+                src={element}
+                onClick={() => changeImg(element)}
+              />
+            ))
           ) : (
             <div className="slider-spin-home">
-              <Spin />
+              <Spin time="24000" message="Проблемы с интернетом" />
             </div>
           )}
         </div>
@@ -134,4 +145,4 @@ export default function Slider({ changeArrayText }) {
       </button>
     </div>
   );
-}
+});

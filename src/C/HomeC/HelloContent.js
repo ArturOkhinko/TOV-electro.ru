@@ -2,7 +2,7 @@ import React from "react";
 import "./HelloContentC/HelloContent.css";
 import video from "/Users/admin/Desktop/pet-progects/electro-tovary/src/video/Video.mov";
 import logo from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/Logo.jpeg";
-export default function HelloContent() {
+export default React.memo(function HelloContent() {
   return (
     <div className="main-hello-content">
       <div className="hello-animation">
@@ -18,4 +18,4 @@ export default function HelloContent() {
       <hr className="hello-content-hr" />
     </div>
   );
-}
+});
