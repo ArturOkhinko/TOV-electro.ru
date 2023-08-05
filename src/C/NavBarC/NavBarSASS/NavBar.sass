@@ -2,39 +2,86 @@ $backgroundColor: rgb(16, 30, 61)
 $textColor: rgb(0, 132, 255)
 $background-Link: rgb(1, 75, 143)
 $mainTextColor: rgb(181, 216, 255)
+
 .main-nav-bar
-    border-right: 1px solid $textColor 
+    height: 100%
+    position: fixed
+    top: 0
+    display: flex
+    flex-direction: column
     background-color: $backgroundColor
+    color: $textColor
+    z-index: 45
     .social-navBar
         display: flex
         flex-direction: column
         align-items: center
+        margin: 20px 0 0 0
+        .git-hub-nav-bar
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+            a
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                width: 162px
+                text-decoration: none
+                color: $textColor
+                img
+                    border-radius: 100%
+                    box-shadow: 1px 0 10px $textColor
+                    width: 80px
+                    animation: shadow 4s infinite
+            .logo-nav-bar
+                    border-radius: 100%
+                    box-shadow: 1px 0 10px $textColor
+                    width: 120px
+                    animation: shadow 4s infinite
+        .logo-nav-bar-social
+            animation: shadow 4s infinite
+            border-radius: 100%
         p
             font-size: 16px
             margin: 0 0 22px 0
 
         img
-            width: 40px
+            width: 60px
             margin: 21px 0
-.navigation
-    display: flex
-    flex-direction: column
+    .navigation
+        display: flex
+        flex-direction: column
+        margin: 55px 10px 0 10px
 
-.link
-    text-decoration: none
-    color: $mainTextColor
-    border: 1px solid $textColor
-    border-radius: 50px
-    padding: 4px 20px 4px 20px
-    margin: 10px
-    min-width: 100px
-    align-self: center
-    text-align: center
-    font-size: 21px
+    .link
+        text-decoration: none
+        color: $mainTextColor
+        border: 1px solid $textColor
+        border-radius: 50px
+        padding: 4px 20px 4px 20px
+        margin: 10px
+        min-width: 100px
+        align-self: center
+        text-align: center
+        font-size: 21px
+    .link:hover
+        background-color: $background-Link
+    .link:active
+        background-color: $background-Link
+@keyframes shadow
+    0%
+        box-shadow: 1px 0 10px $textColor
+    50%
+        box-shadow: 1px 0 20px $mainTextColor
+    100%
+        box-shadow: 1px 0 10px $textColor
 
-.link:hover
-    background-color: $background-Link
-.link:focus
-    background-color: $background-Link
-.main
-    color: $textColor
+        
+@media ( max-width: 800px )
+    .main-nav-bar
+        .social-navBar
+            img
+                width: 40px
+        

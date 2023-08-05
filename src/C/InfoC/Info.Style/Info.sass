@@ -3,7 +3,13 @@ $textColor: rgb(0, 132, 255)
 $mainTextColor: rgb(181, 216, 255)
 $danger: rgb(252, 190, 43)
 .main-info
-    margin: 10px
+    margin: 55px 0 0 0
+    .video-info
+        display: flex
+        justify-content: flex-start
+        video
+            max-width: 60%
+            margin: 0 0 0 45px
     .modal-img
         max-width: 100%
         max-height: 100%
@@ -88,6 +94,10 @@ $danger: rgb(252, 190, 43)
     color: $danger
 @media ( max-width: 1300px)
     .main-info
+        .video-info
+            justify-content: center
+            video
+                margin: 0
         .line-info
             flex-direction: column
         .slider-info-main
@@ -205,6 +215,9 @@ $danger: rgb(252, 190, 43)
 
 @media ( max-width: 400px)
     .main-info
+        .video-info
+            video
+                min-width: 100%
         .main-text
             .name
                 font-size: 24px

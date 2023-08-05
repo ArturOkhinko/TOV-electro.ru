@@ -8,45 +8,54 @@
   overflow-x: hidden;
 }
 .main .content {
-  margin-left: 200px;
-  margin-top: 60px;
-  min-height: 400px;
+  margin-left: 182px;
+  min-height: 700px;
+  margin-top: 45px;
+  border-left: 1px solid rgb(0, 132, 255);
+  z-index: 40;
 }
 
 .info-line {
   min-width: 100%;
   background-color: silver;
   height: 45px;
+  position: fixed;
+  z-index: 50;
 }
 
 .nav-bar {
   display: block;
   position: fixed;
-  margin-top: 40px;
-  width: 200px;
-  animation: left 0.1s;
-  z-index: 100;
+  animation: left 1s;
+  z-index: 45;
+  height: 100%;
 }
 
 .footer {
   height: auto;
-  margin-top: 100px;
   background-color: rgb(9, 9, 35);
+  position: relative;
+  z-index: 35;
 }
 
 @keyframes left {
   0% {
     transform: translateX(-200%);
+    top: 0;
   }
   100% {
     transform: translateX(0);
+    margin: 0;
+    top: 0;
   }
 }
 @media (max-width: 800px) {
   .main .content {
-    margin: 10px 1px 10px 1px;
+    margin: 45px 0 0 0;
+    border-left: none;
   }
   .nav-bar {
     margin: 0;
+    height: 100%;
   }
 }/*# sourceMappingURL=App.css.map */

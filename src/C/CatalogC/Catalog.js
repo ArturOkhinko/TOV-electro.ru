@@ -4,6 +4,7 @@ import ElectroTovary from "./ElectroTovary";
 import Select from "../SelectC/Select";
 import Spin from "../Spin/Spin";
 import ModalImg from "../ModalImgC/ModalImg";
+import { urlToCatalog } from "../../urlToGoogleDisc";
 export default function Catalog() {
   const [data, setData] = React.useState();
   const [propsArray, setPropsArray] = React.useState([]);
@@ -17,9 +18,7 @@ export default function Catalog() {
     const changeUrl = arrayUrl.join("") + "gviz/tq?";
     return changeUrl;
   };
-  const urlSheets =
-    "https://docs.google.com/spreadsheets/d/1qpYiqNALij6MVcUWUmdQnIGBWDXbZkMZKphnHE7lvfg/edit#gid=0";
-  const changedUrlSheets = changeGoogleSheetsUrl(urlSheets);
+  const changedUrlSheets = changeGoogleSheetsUrl(urlToCatalog);
   const fetchGoogleSheets = function (url) {
     fetch(url)
       .then((res) => res.text())

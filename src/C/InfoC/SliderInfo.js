@@ -1,6 +1,7 @@
 import React from "react";
 import Spin from "../Spin/Spin";
 import "./SliderInfo.Style/SliderInfo.css";
+import { urlToInfoSlider } from "../../urlToGoogleDisc";
 export default function SliderInfo({ changeImg }) {
   const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
@@ -13,9 +14,7 @@ export default function SliderInfo({ changeImg }) {
     return changeUrl;
   };
 
-  const urlSheets =
-    "https://docs.google.com/spreadsheets/d/1qUbUFA1v4UYMTVL1SFwCH-xaTy4FlhlEkmgpGeUxgvc/edit#gid=0";
-  const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlSheets);
+  const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlToInfoSlider);
 
   const fetchGoogleDisc = function (url) {
     fetch(url)
@@ -25,20 +24,18 @@ export default function SliderInfo({ changeImg }) {
       });
   };
 
-  function queryArrayColumnsValue(JSON, row) {
+  function queryArrayColumn(JSON, col) {
     const arrayRows = JSON.table.rows;
-    const arrayColumnsWidthObj = arrayRows[row - 1].c;
-    const arrayColumnsValue = [];
-    arrayColumnsWidthObj.forEach((element) => {
-      arrayColumnsValue.push(element.v);
+    const arrayColumns = [];
+    arrayRows.forEach((element) => {
+      arrayColumns.push(element.c[col - 1].v);
     });
-    return arrayColumnsValue;
+    return arrayColumns;
   }
 
   function changeGoogleDiscUrl(url) {
     const urlPhoto = url;
     const sliceUrl = urlPhoto.slice(32, 65);
-    console.log(sliceUrl);
     const googleDriveLink =
       "https://drive.google.com/uc?export=view&id=" + sliceUrl;
     return googleDriveLink;
@@ -49,12 +46,11 @@ export default function SliderInfo({ changeImg }) {
 
   React.useEffect(() => {
     if (typeof data === "object") {
-      const arrayValue = queryArrayColumnsValue(data, 1);
+      const arrayValue = queryArrayColumn(data, 1);
       const changeArrayValue = arrayValue.map((element) => {
         return changeGoogleDiscUrl(element);
       });
       setArrayImg(changeArrayValue);
-      console.log(arrayImg[0]);
     }
   }, [data]);
 

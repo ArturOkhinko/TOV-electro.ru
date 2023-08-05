@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Info.Style/Info.css";
+import video from "/Users/admin/Desktop/pet-progects/electro-tovary/src/video/Video.mov";
+import logo from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/tov.png";
 import SliderInfo from "./SliderInfo";
 import Time from "../TimeC/Time";
 import ModalWindow from "./ModalWindow";
@@ -108,6 +110,9 @@ export default function Info() {
             есть шанс купить товары по самым низким ценам.
           </div>
         ) : null}
+      </div>
+      <div className="video-info">
+        <video poster={logo} controls loop src={video}></video>
       </div>
     </div>
   );

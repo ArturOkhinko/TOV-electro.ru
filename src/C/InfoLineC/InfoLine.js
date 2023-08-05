@@ -2,7 +2,7 @@ import React from "react";
 import "./InfoLine.Style/InfoLine.css";
 import Burger from "../BurgerC/Burger";
 import SocialLine from "./SocialLine";
-import logo from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/Logo.jpeg";
+import logo from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/tov.png";
 export default function InfoLine({ isNavBar }) {
   const [positionButton, setPositionButton] = React.useState(-200);
 

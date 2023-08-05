@@ -1,5 +1,13 @@
 .main-info {
-  margin: 10px;
+  margin: 55px 0 0 0;
+}
+.main-info .video-info {
+  display: flex;
+  justify-content: flex-start;
+}
+.main-info .video-info video {
+  max-width: 60%;
+  margin: 0 0 0 45px;
 }
 .main-info .modal-img {
   max-width: 100%;
@@ -102,6 +110,12 @@
 }
 
 @media (max-width: 1300px) {
+  .main-info .video-info {
+    justify-content: center;
+  }
+  .main-info .video-info video {
+    margin: 0;
+  }
   .main-info .line-info {
     flex-direction: column;
   }
@@ -248,6 +262,9 @@
   }
 }
 @media (max-width: 400px) {
+  .main-info .video-info video {
+    min-width: 100%;
+  }
   .main-info .main-text .name {
     font-size: 24px;
   }

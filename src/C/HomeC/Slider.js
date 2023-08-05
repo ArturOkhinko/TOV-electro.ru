@@ -1,6 +1,7 @@
 import React from "react";
 import "./SliderC/Slider.css";
 import Spin from "../Spin/Spin";
+import { urlToSaleSlider } from "../../urlToGoogleDisc";
 
 export default React.memo(function Slider({ changeArrayText, changeImg }) {
   const [arrayImg, setArrayImg] = React.useState([]);
@@ -14,7 +15,7 @@ export default React.memo(function Slider({ changeArrayText, changeImg }) {
   };
   const urlSheets =
     "https://docs.google.com/spreadsheets/d/11qkoBCCifIPzOBunvWP5n1ilErXN_8tixOcThEb9WuE/edit#gid=0";
-  const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlSheets);
+  const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlToSaleSlider);
   const fetchGoogleDisc = function (url) {
     fetch(url)
       .then((res) => res.text())

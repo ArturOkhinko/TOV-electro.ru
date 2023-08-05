@@ -23,6 +23,7 @@
   width: 700px;
   height: 350px;
   overflow: hidden;
+  border-radius: 20px;
 }
 .slider-window .allImg {
   width: 700px;
@@ -40,6 +41,7 @@
 .slider-window .allImg img {
   min-width: 700px;
   height: 350px;
+  border-radius: 20px;
 }
 
 @media (max-width: 1000px) {

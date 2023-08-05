@@ -6,21 +6,21 @@
 .main-home .modalImg {
   min-width: 100%;
   min-height: 100%;
-  top: 0;
 }
 
 .hello-content {
-  margin-left: 60px;
+  max-width: 100%;
 }
 
 .sale-content {
   display: flex;
-  margin-top: 60px;
+  margin: 40px 0 40px 0;
 }
 .sale-content .main-text-sale {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .sale-content .main-text-sale .text-sale {
   margin-top: 20px;
@@ -42,14 +42,11 @@
   }
 }
 @media (max-width: 800px) {
-  .hello-content {
-    margin: 0 4px 0 4px;
-  }
   .hello-content .slider {
     margin: 0;
   }
   .sale-content {
-    margin: 10px;
+    margin: 20px 0 0 0;
   }
   .sale-content .main-text-sale .text-sale {
     font-size: 16px;

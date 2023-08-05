@@ -22,6 +22,7 @@
   width: 500px;
   height: 250px;
   overflow: hidden;
+  border-radius: 20px;
 }
 .info-slider-window .info-allImg {
   width: 1500px;

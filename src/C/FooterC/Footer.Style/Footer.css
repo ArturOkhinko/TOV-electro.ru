@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  color: rgb(0, 132, 255);
 }
 .main-footer .telephone {
   margin-top: 10px;
@@ -15,6 +16,18 @@
 .social-footer img {
   width: 50px;
   margin: 20px;
+}
+
+.git-hub-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+}
+.git-hub-footer img {
+  width: 40px;
+  margin: 10px;
 }
 
 @media (max-width: 400px) {

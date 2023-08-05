@@ -4,6 +4,7 @@ import VK from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/VK.pn
 import Telegram from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/Telegrm.png";
 import WhatsApp from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/WhatsApp.png";
 import LightMail from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/LightMail.png";
+import GitHub from "/Users/admin/Desktop/pet-progects/electro-tovary/src/image/GitHub.png";
 export default function Footer() {
   return (
     <div className="main-footer">
@@ -22,6 +23,12 @@ export default function Footer() {
         </a>
         <a href="mailto:va_electro@bk.ru">
           <img src={LightMail} />
+        </a>
+      </div>
+      <div className="git-hub-footer">
+        <a href="https://github.com/ArturOkhinko">
+          <p>GitHub создателя сайта</p>
+          <img src={GitHub} />
         </a>
       </div>
     </div>
