@@ -110,6 +110,7 @@ export default function Catalog() {
         console.log(array);
         return array;
       });
+      const propsArr = [];
       arrayValue.forEach((element, index) => {
         const propsObj = {};
         propsObj.id = index;
@@ -130,8 +131,9 @@ export default function Catalog() {
         if (propsArray.length < arrayValue.length) {
           propsArray.push(propsObj);
         }
-        setPropsArray(propsArray);
+        propsArr.push(propsObj);
       });
+      setPropsArray(propsArray);
     }
 
     return propsArray;

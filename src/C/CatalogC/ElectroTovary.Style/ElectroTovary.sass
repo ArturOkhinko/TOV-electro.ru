@@ -4,34 +4,33 @@ $mainTextColor: rgb(181, 216, 255)
 $backgroundColorFooter: rgb(9, 9, 35)
 $danger: rgb(252, 190, 43)
 .main-tovary
-    min-width: 100%
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-gap: 10px
+    display: flex
+    flex-wrap: wrap
     .main-tovar
         border: 1px solid $textColor
-
+        width: 32%
         display: flex
         flex-direction: column
         justify-content: space-between
+        margin: 0 1px 0 1px
         .img-tovar
             img
                 width: 100%
+
+                
             
         .header-tovar
-            height: 100px
             font-size: 40px
             color: $danger
             text-align: center
         .text-tovar
-            height: 100%
             color: $mainTextColor
-            margin: 0 10px 0 10px
+            margin: 10px 10px 0 10px
             font-size: 24px
         .main-prise
             align-self: flex-end
             color: $danger
-            margin: 0 10px 4px 0
+            margin: 20px 10px 4px 0
             .sale-catalog
                 font-size: 40px
                 display: flex
@@ -49,15 +48,12 @@ $danger: rgb(252, 190, 43)
 
 
 @media ( max-width: 1300px )
-    .main-tovary
-        grid-template-columns: 1fr 1fr 1fr
+    .main-tovar
+        min-width: 49%
     
-@media ( max-width: 1050px )
-    .main-tovary
-        grid-template-columns: 1fr 1fr
-@media ( max-width: 490px )
-    .main-tovary
-        grid-template-columns: 1fr
+@media ( max-width: 600px )
+    .main-tovar
+        min-width: 100%
 
 
     
