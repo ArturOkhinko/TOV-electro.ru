@@ -33,13 +33,6 @@ export default function SliderInfo({ changeImg }) {
     return arrayColumns;
   }
 
-  function changeGoogleDiscUrl(url) {
-    const urlPhoto = url;
-    const sliceUrl = urlPhoto.slice(32, 65);
-    const googleDriveLink =
-      "https://drive.google.com/uc?export=view&id=" + sliceUrl;
-    return googleDriveLink;
-  }
   React.useEffect(() => {
     fetchGoogleDisc(changedUrlGoogleSheets);
   }, []);
@@ -47,10 +40,7 @@ export default function SliderInfo({ changeImg }) {
   React.useEffect(() => {
     if (typeof data === "object") {
       const arrayValue = queryArrayColumn(data, 1);
-      const changeArrayValue = arrayValue.map((element) => {
-        return changeGoogleDiscUrl(element);
-      });
-      setArrayImg(changeArrayValue);
+      setArrayImg(arrayValue);
     }
   }, [data]);
 

@@ -6,3 +6,5 @@ export const urlToInfoSlider =
   "https://docs.google.com/spreadsheets/d/1jqsBiDA1C3TcSpSO4dpkAzATZpl3sl3fjd58cIHaI-8/edit#gid=0";
 export const urlToCatalog =
   "https://docs.google.com/spreadsheets/d/1qpYiqNALij6MVcUWUmdQnIGBWDXbZkMZKphnHE7lvfg/edit#gid=0";
+export const urlToCatalogInfo =
+  "https://docs.google.com/spreadsheets/d/1gVStEeK9pB593QRCz7prMa72F3ezqmcxWGZBqPHEjvo/edit#gid=0";

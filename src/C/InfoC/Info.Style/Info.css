@@ -1,13 +1,11 @@
 .main-info {
-  margin: 55px 0 0 0;
+  margin: 0;
 }
 .main-info .video-info {
   display: flex;
-  justify-content: flex-start;
 }
 .main-info .video-info video {
-  max-width: 60%;
-  margin: 0 0 0 45px;
+  max-width: 100%;
 }
 .main-info .modal-img {
   max-width: 100%;
@@ -22,19 +20,18 @@
   z-index: 10;
 }
 .main-info .line-info {
+  margin-top: 55px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.main-info .slider-info-main {
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.main-info .slider-info {
+  margin-top: 50px;
 }
 .main-info .main-text {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 .main-info .main-text button {
   background-color: rgb(16, 30, 61);
@@ -72,10 +69,9 @@
   margin-left: 10px;
 }
 .main-info .more-text {
-  margin: 20px 20px 10px 20px;
   font-size: 24px;
   color: rgb(181, 216, 255);
-  margin: 10px 40px 10px;
+  margin: 55px 40px 10px;
   display: flex;
 }
 .main-info .more-text .text-time {
@@ -101,7 +97,7 @@
 }
 .main-info .more-text .text-welcome {
   align-self: center;
-  margin: 0 280px 0 50px;
+  margin: 0 40px 0 50px;
   line-height: 50px;
 }
 
@@ -110,18 +106,8 @@
 }
 
 @media (max-width: 1300px) {
-  .main-info .video-info {
-    justify-content: center;
-  }
-  .main-info .video-info video {
-    margin: 0;
-  }
   .main-info .line-info {
     flex-direction: column;
-  }
-  .main-info .slider-info-main {
-    min-width: 560px;
-    height: 250px;
   }
   .main-info .main-text .name {
     font-size: 40px;
@@ -136,7 +122,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 10px 10px;
+    margin: 20px 10px 10px;
   }
   .main-info .more-text .time-info {
     margin: 10px 0 0 0;
@@ -160,10 +146,6 @@
   }
 }
 @media (max-width: 1050px) {
-  .main-info .slider-info-main {
-    min-width: 560px;
-    height: 250px;
-  }
   .main-info .main-text .name {
     font-size: 28px;
   }
@@ -188,10 +170,6 @@
   }
 }
 @media (max-width: 900px) {
-  .main-info .slider-info-main {
-    min-width: 460px;
-    height: 200px;
-  }
   .main-info .main-text .name {
     font-size: 24px;
   }
@@ -209,6 +187,13 @@
   }
   .main-info .more-text .text-welcome {
     font-size: 17px;
+  }
+  .main-info .more-text .video-info {
+    justify-content: center;
+    margin: 20px 0 20px 0;
+  }
+  .main-info .more-text .catalog-info {
+    margin-top: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -238,9 +223,9 @@
   }
 }
 @media (max-width: 500px) {
-  .main-info .slider-info-main {
-    min-width: 300px;
-    height: 200px;
+  .main-info .video-info {
+    width: calc(100vw - 20px);
+    margin: 10px;
   }
   .main-info .main-text .name {
     font-size: 24px;

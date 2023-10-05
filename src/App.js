@@ -6,7 +6,6 @@ import NavBar from "./C/NavBarC/NavBar";
 import InfoLine from "./C/InfoLineC/InfoLine";
 import Footer from "./C/FooterC/Footer";
 import Info from "./C/InfoC/Info";
-import Catalog from "./C/CatalogC/Catalog";
 
 function App() {
   let widthWindow = 0;
@@ -37,7 +36,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/info" element={<Info />} />
-          <Route path="/catalog" element={<Catalog />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

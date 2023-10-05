@@ -48,10 +48,8 @@ export default function Info() {
         </div>
       ) : null}
       <div className="line-info">
-        <div className="slider-info-main">
-          <div className="slider-info">
-            <SliderInfo changeImg={changeImg} />
-          </div>
+        <div className="slider-info">
+          <SliderInfo changeImg={changeImg} />
         </div>
         <div className="main-text">
           <div className="name danger">Электротовары</div>
@@ -65,14 +63,6 @@ export default function Info() {
               </div>
             </div>
           </button>
-          <div className="text">
-            «Всегда в наличии материал для электромонтажных работ❗️
-            -Комплексные поставки электротехники, кабельно-проводниковой
-            продукции и светотехники, электроустановочных изделий, модульного
-            оборудования и тд. -Подбор и монтаж оборудования; -Выездное
-            обслуживание. -Сборка электрощитового оборудования(ГРЩ, ВРУ, АВР,
-            ЩР, щитов управления)
-          </div>
         </div>
       </div>
       <div className="more-text">
@@ -109,9 +99,9 @@ export default function Info() {
             есть шанс купить товары по самым низким ценам.
           </div>
         ) : null}
-      </div>
-      <div className="video-info">
-        <video poster={logo} controls loop src={video}></video>
+        <div className="video-info">
+          <video poster={logo} controls loop src={video}></video>
+        </div>
       </div>
     </div>
   );

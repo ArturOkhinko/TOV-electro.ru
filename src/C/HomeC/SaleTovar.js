@@ -5,7 +5,6 @@ import { urlToTopSaleLine } from "../../urlToGoogleDisc";
 export default React.memo(function SaleTovar({ changeImgModal }) {
   const [data, setData] = React.useState();
   const [arrayImg, setArrayImg] = React.useState([]);
-  const divRef = React.useRef();
   const changeGoogleSheetsUrl = (url) => {
     const arrayUrl = [...url];
     arrayUrl.splice(-10);
@@ -27,13 +26,6 @@ export default React.memo(function SaleTovar({ changeImgModal }) {
     });
     return arrayColumns;
   }
-  function changeGoogleDiscUrl(url) {
-    const urlPhoto = url;
-    const sliceUrl = urlPhoto.slice(32, 65);
-    const googleDriveLink =
-      "https://drive.google.com/uc?export=view&id=" + sliceUrl;
-    return googleDriveLink;
-  }
   React.useEffect(() => {
     const changeUrl = changeGoogleSheetsUrl(urlToTopSaleLine);
     setData(fetchGoogleDisc(changeUrl));
@@ -42,10 +34,7 @@ export default React.memo(function SaleTovar({ changeImgModal }) {
   React.useEffect(() => {
     if (typeof data === "object") {
       const arrayValue = queryArrayColumn(data, 1);
-      const changeArrayValue = arrayValue.map((img) =>
-        changeGoogleDiscUrl(img)
-      );
-      setArrayImg(changeArrayValue);
+      setArrayImg(arrayValue);
     }
   }, [data]);
   return (

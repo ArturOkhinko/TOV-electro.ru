@@ -21,9 +21,6 @@ export default function NavBar() {
         <Link className="link" to="/info">
           О НАС
         </Link>
-        <Link className="link" to="/catalog">
-          КАТАЛОГ
-        </Link>
       </div>
       <div className="social-navBar">
         {widthWindow > 800 ? (

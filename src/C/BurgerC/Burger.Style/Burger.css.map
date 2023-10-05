@@ -1,1 +1,1 @@
-{"version":3,"sources":["Burger.sass","Burger.css"],"names":[],"mappings":"AAGA;EACI,WAAA;EACA,YAAA;EACA,kCAAA;EACA,mBAAA;EACA,iCARc;EASd,aAAA;EACA,sBAAA;EACA,mBAAA;EAEA,uBAAA;ACHJ;ADOI;EACI,YAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,kCArBI;ACgBZ","file":"Burger.css"}
+{"version":3,"sourceRoot":"","sources":["Burger.sass"],"names":[],"mappings":"AAGA;EACI;EACA;EACA;EACA;EACA,kBARc;EASd;EACA;EACA;EAEA;;AAIA;EACI;EACA;EACA;EACA;EACA,kBArBI","file":"Burger.css"}

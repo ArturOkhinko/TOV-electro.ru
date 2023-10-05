@@ -3,7 +3,7 @@ import "./SliderC/Slider.css";
 import Spin from "../Spin/Spin";
 import { urlToSaleSlider } from "../../urlToGoogleDisc";
 
-export default React.memo(function Slider({ changeArrayText, changeImg }) {
+export default React.memo(function Slider({ changeImg }) {
   const [arrayImg, setArrayImg] = React.useState([]);
   const [positionImg, setPositionImg] = React.useState(0);
   const [data, setData] = React.useState();
@@ -13,8 +13,6 @@ export default React.memo(function Slider({ changeArrayText, changeImg }) {
     const changeUrl = arrayUrl.join("") + "gviz/tq?";
     return changeUrl;
   };
-  const urlSheets =
-    "https://docs.google.com/spreadsheets/d/11qkoBCCifIPzOBunvWP5n1ilErXN_8tixOcThEb9WuE/edit#gid=0";
   const changedUrlGoogleSheets = changeGoogleSheetsUrl(urlToSaleSlider);
   const fetchGoogleDisc = function (url) {
     fetch(url)
@@ -33,13 +31,6 @@ export default React.memo(function Slider({ changeArrayText, changeImg }) {
     return arrayColumns;
   }
 
-  function changeGoogleDiscUrl(url) {
-    const urlPhoto = url;
-    const sliceUrl = urlPhoto.slice(32, 65);
-    const googleDriveLink =
-      "https://drive.google.com/uc?export=view&id=" + sliceUrl;
-    return googleDriveLink;
-  }
   React.useEffect(() => {
     fetchGoogleDisc(changedUrlGoogleSheets);
   }, []);
@@ -47,12 +38,7 @@ export default React.memo(function Slider({ changeArrayText, changeImg }) {
   React.useEffect(() => {
     if (typeof data === "object") {
       const arrayValue = queryArrayColumnsValue(data, 1);
-      const changeArrayValue = arrayValue.map((element) => {
-        return changeGoogleDiscUrl(element);
-      });
-      setArrayImg(changeArrayValue);
-      const arrayValueText = queryArrayColumnsValue(data, 2);
-      changeArrayText(arrayValueText);
+      setArrayImg(arrayValue);
     }
   }, [data]);
 

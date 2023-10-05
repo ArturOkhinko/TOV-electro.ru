@@ -35,7 +35,7 @@ export default React.memo(function HelloContent() {
           <ModalImg
             img={imgModal}
             removeImg={removeImgModal}
-            contentOption="str"
+            contentOption=""
           />
         ) : null}
       </div>
